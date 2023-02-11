@@ -47,7 +47,6 @@ The tutorial case simulated the SRI-402 experiment. This is an experiment to stu
 - Run 'decomposepar'
 - Run 'mpirun -np # radXiFoam -parallel'
 
-
 ## Algorithm
 XiFoam calculates the laminar flame speed (Su) value according to the ambient temperature and pressure, and the fuel to oxidizer ratio. Calculate the flame wrinkling (Xi) value according to the turbulence intensity and Reynolds number to derive the turbulent flame speed (St) value. In the compressible turbulent combustion model, the value of St controls the propagation of the regress variable (b). Instead of the progress variable (c) used in general FPV models, XiFoam uses the regress variable (b, b = 1 - c).
 The mass fraction of the compositions within a computational cell before and after combustion is determined by the value of b. As the mass fraction changes, the values of Cp and h in the cell are altered, resulting in a change in temperature.
@@ -72,4 +71,7 @@ This code discretizes the momentum, energy, and continuity conservation equation
  - 4.	Correct U
  - 5.	LOOP
  3. LOOP
+
+## References
+1. 
 
