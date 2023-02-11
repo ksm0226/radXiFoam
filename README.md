@@ -56,3 +56,22 @@ XiFoam calculates the laminar flame speed (u) value according to the ambient tem
 The mass fraction of compositions in the computation cell before and after combustion is determined by the value of b. As much as the mass fraction changes, the Cp and h values in the cell change, that is, the temperature changes.
 This code discretizes the momentum, energy, and continuity conservation equations of a compressible gas in the FVM method and is solved according to the following algorithm.
 
+- 1. Initialize simulation data, turbulent, combustion and radiation model
+- 2. WHILE t < tend DO
+ - 1.	Update Δt for stability (CFL condition)
+ - 2.	Solve rho equation
+ - 3.	Do pressure-velocity PIMPLE corrector loop
+  - 1. Solve U equation
+  - 2. Solve ft equation (wv, n2 continuity eqns 여기에)
+  - 3. Solve b equation
+   - 1.	Calculate combustion properties (Xi, Su)
+  - 4. Solve energy (Eau, Ea) equations
+   - 1.	Update T
+  - 5. Do pressure PISO corrector loop
+   - 1. Solve p equation
+   - 2. Correct p
+  - 6. LOOP
+ - 4.	Correct U
+ - 5.	LOOP
+- 3. LOOP
+
