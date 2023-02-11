@@ -35,15 +35,15 @@ The tutorial case simulated the SRI-402 experiment. This is an experiment to stu
 - Source OpenFOAM v2112
 - Run 'blockMesh'
 - If you want to change the composition of a gas, run 'phthon alphaBetaCalc.py'
- - Enter the alphaBetaCalc.py results (ft, wv and n2) in system/setFieldsDict
-   - system/setFieldsDict/defaultFieldValues is for the initial condition outside the tent
-   - system/setFieldsDict/regions/boxToCell is for the initial condition inside the tent
-   - system/setFieldsDict/regions/sphereToCell is for the ignitin condition
- - Enter equivalence ratio, alpha and beta in constant/combustionProperties
- - The w value in constant/combustionProperties/powerLawCoeff is the Su0 (reference laminar flame speed). 
-  - In general, it is set by referring to the paper of the laminar flame speed test result for each type of fuel. (ref. 3)
+  - Enter the alphaBetaCalc.py results (ft, wv and n2) in system/setFieldsDict
+    - system/setFieldsDict/defaultFieldValues is for the initial condition outside the tent
+    - system/setFieldsDict/regions/boxToCell is for the initial condition inside the tent
+    - system/setFieldsDict/regions/sphereToCell is for the ignitin condition
+  - Enter equivalence ratio, alpha and beta in constant/combustionProperties
+  - The w value in constant/combustionProperties/powerLawCoeff is the Su0 (reference laminar flame speed). 
+    - In general, it is set by referring to the paper of the laminar flame speed test result for each type of fuel. (ref. 3)
 - Set the number # of cores to use for compute in system/decomposeParDict/numberOfSubdomains.
- - Since the mesh in the tutorial case consists of 1.2 million cells, it is recommended to run in parallel.  
+  - Since the mesh in the tutorial case consists of 1.2 million cells, it is recommended to run in parallel.  
 - Run 'decomposepar'
 - Run 'mpirun -np # radXiFoam -parallel'
 
