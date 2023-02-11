@@ -48,3 +48,11 @@ tutorial case 는 SRI-402 실험을 모사 하였습니다. 수소가스로 가�
 - Enter equivalence ratio, alpha and beta in constant/combustionProperties
 - The w value in constant/combustionProperties/powerLawCoeff is the Su0 (reference laminar flame speed). 
  - In general, it is set by referring to the paper of the laminar flame speed test result for each type of fuel.
+
+
+
+## Algorithm
+XiFoam calculates the laminar flame speed (u) value according to the ambient temperature and pressure, and the fuel to oxidizer ratio. Calculate the flame wrinkling (Xi) value according to the turbulence intensity and Reynolds number to derive the turbulent flame speed (St) value. In the compressible turbulent combustion model, the value of St controls the propagation of the regress variable (b). Instead of the progress variable (c) used in general FPV models, XiFoam uses the regress variable (b, b = 1 - c).
+The mass fraction of compositions in the computation cell before and after combustion is determined by the value of b. As much as the mass fraction changes, the Cp and h values in the cell change, that is, the temperature changes.
+This code discretizes the momentum, energy, and continuity conservation equations of a compressible gas in the FVM method and is solved according to the following algorithm.
+
