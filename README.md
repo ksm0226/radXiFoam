@@ -65,12 +65,12 @@ This code discretizes the momentum, energy, and continuity conservation equation
    * 1. Solve U equation
    * 2. Solve ft equation
    * 3. Solve b equation
-   *  - Calculate combustion properties (Xi, Su)
+    *  - Calculate combustion properties (Xi, Su)
    * 4. Solve energy (Eau, Ea) equations
-   *  - Update T
+    *  - Update T
    * 5. Do pressure PISO corrector loop
-   *  - Solve p equation
-   *  - Correct p
+    *  - Solve p equation
+    *  - Correct p
    * 6. LOOP
  - 4.	Correct U
  - 5.	LOOP
