@@ -46,4 +46,5 @@ tutorial case 는 SRI-402 실험을 모사 하였습니다. 수소가스로 가�
   - system/setFieldsDict/regions/sphereToCell is for the ignitin condition
 
 - Enter equivalence ratio, alpha and beta in constant/combustionProperties
-- The w value in constant/combustionProperties/powerLawCoeff is the Su0 (reference laminar flame speed). Please enter it by the reference for each type of fuel.
+- The w value in constant/combustionProperties/powerLawCoeff is the Su0 (reference laminar flame speed). 
+ - In general, it is set by referring to the paper of the laminar flame speed test result for each type of fuel.
