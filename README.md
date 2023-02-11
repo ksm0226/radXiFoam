@@ -58,9 +58,9 @@ This code discretizes the momentum, energy, and continuity conservation equation
  - 1.	Update Δt for stability (CFL condition)
  - 2.	Solve rho equation
  - 3.	Do pressure-velocity PIMPLE corrector loop
-   * 1. Solve U equation
-   * 2. Solve ft equation
-   * 3. Solve b equation
+   * 1. Solve momentum (U) equation
+   * 2. Solve transport (ft, wv, n2) equation
+   * 3. Solve transport (b) equation
     *  - Calculate combustion properties (Xi, Su)
    * 4. Solve energy (Eau, Ea) equations
     *  - Update T
