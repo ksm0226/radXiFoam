@@ -57,8 +57,8 @@ The mass fraction of the compositions within a computational cell before and aft
 
 This code discretizes the momentum, energy, and continuity conservation equations of a compressible gas in the FVM method and is solved according to the following algorithm.
 
-*1. Initialize simulation data, turbulent, combustion and radiation model
-*2. WHILE t < t_end DO
+* 1. Initialize simulation data, turbulent, combustion and radiation model
+* 2. WHILE t < t_end DO
  - 1.	Update Δt for stability (CFL condition)
  - 2.	Solve rho equation
  - 3.	Do pressure-velocity PIMPLE corrector loop
@@ -74,5 +74,5 @@ This code discretizes the momentum, energy, and continuity conservation equation
    * 6. LOOP
  - 4.	Correct U
  - 5.	LOOP
-*3. LOOP
+* 3. LOOP
 
