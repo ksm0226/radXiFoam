@@ -29,22 +29,22 @@ radXiFoam can be used for:
 - Hope the following tutorial case will help you to use radXiFoam.
 
 ## Tutorial case
-tutorial case 는 SRI-402 실험을 모사 하였습니다. 수소가스로 가득찬 텐트가 폭발할때 방호벽 효과에 대한 연구한 실험 입니다. (ref.2)
-
+The tutorial case simulated the SRI-402 experiment. This is an experiment to study the effect of a barrier when a tent filled with hydrogen gas explodes.
 
 - Unzip tutorial.zip
 - Source OpenFOAM v2112
-- run blockMesh
-- run phthon alphaBetaCalc.py 
-- Input the alphaBetaCalc.py results (ft, wv and n2) in system/setFieldsDict
-  - system/setFieldsDict/defaultFieldValues is for the initial condition outside the tent
-  - system/setFieldsDict/regions/boxToCell is for the initial condition inside the tent
-  - system/setFieldsDict/regions/sphereToCell is for the ignitin condition
-
-- Enter equivalence ratio, alpha and beta in constant/combustionProperties
-- The w value in constant/combustionProperties/powerLawCoeff is the Su0 (reference laminar flame speed). 
- - In general, it is set by referring to the paper of the laminar flame speed test result for each type of fuel.
-
+- Run 'blockMesh'
+- If you want to change the composition of a gas, run 'phthon alphaBetaCalc.py'
+ - Enter the alphaBetaCalc.py results (ft, wv and n2) in system/setFieldsDict
+   - system/setFieldsDict/defaultFieldValues is for the initial condition outside the tent
+   - system/setFieldsDict/regions/boxToCell is for the initial condition inside the tent
+   - system/setFieldsDict/regions/sphereToCell is for the ignitin condition
+ - Enter equivalence ratio, alpha and beta in constant/combustionProperties
+ - The w value in constant/combustionProperties/powerLawCoeff is the Su0 (reference laminar flame speed). 
+  - In general, it is set by referring to the paper of the laminar flame speed test result for each type of fuel. (ref. 3)
+- Set the number # of cores to use for compute in system/decomposeParDict/numberOfSubdomains.
+- Run 'decomposepar'
+- Run 'mpirun -np # radXiFoam -parallel'
 
 
 ## Algorithm
