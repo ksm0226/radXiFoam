@@ -20,6 +20,10 @@ radXiFoam can be used for:
 ## Usage
 radXiFoam takes inputs based on mass fraction.
 The alphaBetaCalc.py tool allows the determination of the mass fraction of fuel (0/ft), water vapor (0/wv), nitrogen (0/n2), equivalence ratio  (constant/combustionProperties/equivalenceRatio), and alpha, beta (constant/combustionProperties/powerLawCoeffs).
+alphaBetaCalc.py 의 사용 예시는 다음과 같습니다.
+
+
+
 The tutorial case and alphaBetaCalc.py are written based on the hydrogen flame.
 If other fuels are used, please calculate the mass fraction accordingly.
 
@@ -29,6 +33,17 @@ If you desire to exclude the calculation of radiative heat transfer, you can set
 Hope the following tutorial case will help you to use radXiFoam.
 
 ## Tutorial case
+tutorial case 는 SRI-402 실험을 모사 하였습니다. 수소가스로 가득찬 텐트가 폭발할때 방호벽 효과에 대한 연구한 실험 입니다. (ref.2)
+
+
 - Unzip tutorial.zip
 - Source OpenFOAM v2112
-- 
+- run blockMesh
+- run phthon alphaBetaCalc.py 
+- Input the alphaBetaCalc.py results (ft, wv and n2) in system/setFieldsDict
+  - system/setFieldsDict/defaultFieldValues is for the initial condition outside the tent
+  - system/setFieldsDict/regions/boxToCell is for the initial condition inside the tent
+  - system/setFieldsDict/regions/sphereToCell is for the ignitin condition
+
+- Enter equivalence ratio, alpha and beta in constant/combustionProperties
+- The w value in constant/combustionProperties/powerLawCoeff is the Su0 (reference laminar flame speed). Please enter it by the reference for each type of fuel.
