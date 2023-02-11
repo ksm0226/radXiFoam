@@ -18,19 +18,15 @@ radXiFoam can be used for:
 - Execute "Allwmake.sh" to compile the solver and source codes
 
 ## Usage
-radXiFoam takes inputs based on mass fraction.
-The alphaBetaCalc.py tool allows the determination of the mass fraction of fuel (0/ft), water vapor (0/wv), nitrogen (0/n2), equivalence ratio  (constant/combustionProperties/equivalenceRatio), and alpha, beta (constant/combustionProperties/powerLawCoeffs).
-alphaBetaCalc.py 의 사용 예시는 다음과 같습니다.
+- radXiFoam takes inputs based on mass fraction.
+- The alphaBetaCalc.py tool allows the determination of the mass fraction of fuel (0/ft), water vapor (0/wv), nitrogen (0/n2), equivalence ratio  (constant/combustionProperties/equivalenceRatio), and alpha, beta (constant/combustionProperties/powerLawCoeffs).
+- A usage example and result of alphaBetaCalc.py are as follows.
 
 
+- alphaBetaCalc.py is written based on the hydrogen flame. If other fuels are used, please calculate the mass fraction accordingly.
+- It was confirmed that the p1 radiation model works normally (constant/radiationProperties/radiationModel). If you desire to exclude the calculation of radiative heat transfer, you can set the radiation model to "none".
 
-The tutorial case and alphaBetaCalc.py are written based on the hydrogen flame.
-If other fuels are used, please calculate the mass fraction accordingly.
-
-It was confirmed that the p1 radiation model works normally.(constant/radiationProperties/radiationModel)
-If you desire to exclude the calculation of radiative heat transfer, you can set the radiation model to "none".
-
-Hope the following tutorial case will help you to use radXiFoam.
+- Hope the following tutorial case will help you to use radXiFoam.
 
 ## Tutorial case
 tutorial case 는 SRI-402 실험을 모사 하였습니다. 수소가스로 가득찬 텐트가 폭발할때 방호벽 효과에 대한 연구한 실험 입니다. (ref.2)
