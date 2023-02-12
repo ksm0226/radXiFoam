@@ -44,7 +44,7 @@ The tutorial case simulated the SRI-402 experiment. This is an experiment to stu
     - In general, it is set by referring to the paper of the laminar flame speed test result for each type of fuel. (ref. 3)
 - Set the number of cores (#) to use for compute in system/decomposeParDict/numberOfSubdomains.
   - Since the mesh in the tutorial case consists of 1.2 million cells, it is recommended to run in parallel.  
-- Run 'decomposepar'
+- Run 'decomposear'
 - Run 'mpirun -np # radXiFoam -parallel'
 
 ## Algorithm
