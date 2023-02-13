@@ -1,5 +1,5 @@
 # radXiFoam
-CFD simulation solver with flamelet progress variable (FPV) combustion model with radiation heat transfer.
+CFD simulation solver for flamelet progress variable (FPV) combustion model with radiation heat transfer.
 
 ## Overview
 radXiFoam is an open source simulation tool for studying premixed flames. The solver is based on the XiFoam code developed by [OpenCFD Ltd.](http://openfoam.com/). 
