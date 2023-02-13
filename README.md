@@ -73,4 +73,5 @@ This code discretizes the momentum, energy, and continuity conservation equation
 ## References
 1. Kim, S., & Kim, J. (2022). Effect of radiation model on simulation of water vapor-hydrogen premixed flame using flamelet combustion model in OpenFOAM. Nuclear Engineering and Technology, 54(4), 1321-1335.
 2. Kang, H. S., Kim, S. M., & Kim, J. (2022). Safety issues of a hydrogen refueling station and a prediction for an overpressure reduction by a barrier using OpenFOAM software for an SRI explosion test in an open space. Energies, 15(20), 7556.
+3. Konnov, A. A., Mohammad, A., Kishore, V. R., Kim, N. I., Prathap, C., & Kumar, S. (2018). A comprehensive review of measurements and data analysis of laminar burning velocities for various fuel+ air mixtures. Progress in Energy and Combustion Science, 68, 197-267.
 
