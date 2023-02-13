@@ -28,6 +28,7 @@ radXiFoam can be used for:
 
 ## Tutorial case
 The tutorial case simulated the SRI-402 experiment. This is an experiment to study the effect of a barrier when a tent filled with hydrogen gas explodes.
+Details related to this experiment can be found in ref. 2.
 
 - Unzip tutorial.zip
 - Source OpenFOAM v2112
