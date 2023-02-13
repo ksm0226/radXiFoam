@@ -20,8 +20,9 @@ radXiFoam can be used for:
 ## Usage
 - radXiFoam takes inputs based on mass fraction.
 - The alphaBetaCalc.py tool allows the determination of the mass fraction of fuel (0/ft), water vapor (0/wv), nitrogen (0/n2), equivalence ratio  (constant/combustionProperties/equivalenceRatio), and alpha, beta (constant/combustionProperties/powerLawCoeffs).
-- alphaBetaCalc.py is written based on the hydrogen flame. If other fuels are used, please calculate the mass fraction accordingly.
-- It was confirmed that the p1 radiation model works normally (constant/radiationProperties/radiationModel). If you desire to exclude the calculation of radiative heat transfer, you can set the radiation model to "none".
+- alphaBetaCalc.py is written based on the hydrogen fuel. If other fuels are used, please calculate the mass fraction accordingly.
+- It was confirmed that the p1 radiation model works normally (constant/radiationProperties/radiationModel). 
+  - If you desire to exclude the calculation of radiative heat transfer, you can set the radiation model to "none".
 
 - Hope the following tutorial case will help you to use radXiFoam.
 
