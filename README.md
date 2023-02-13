@@ -21,8 +21,19 @@ radXiFoam can be used for:
 - radXiFoam takes inputs based on mass fraction.
 - The alphaBetaCalc.py tool allows the determination of the mass fraction of fuel (0/ft), water vapor (0/wv), nitrogen (0/n2), equivalence ratio  (constant/combustionProperties/equivalenceRatio), and alpha, beta (constant/combustionProperties/powerLawCoeffs).
 - A usage example and result of alphaBetaCalc.py are as follows.
-
-
+---------------------------------------------------------------------------------
+user@user-System-Product-Name:~/OpenFOAM/data$ python alphaBetaCalc.py 
+H2 volume fraction: 0.2    
+H2O volume fraction: 0.3 
+===============================================
+('H2 mass fraction: ', 0.019782393669634028)
+('H2O mass fraction: ', 0.26706231454005935)
+('N2 mass fraction: ', 0.5469831849653809)
+('equivalence ratio: ', 0.9523809523809526)
+('H2 alpha: ', 2.218095238095238)
+('H2 beta: ', -0.17047619047619045)
+===============================================
+---------------------------------------------------------------------------------
 - alphaBetaCalc.py is written based on the hydrogen flame. If other fuels are used, please calculate the mass fraction accordingly.
 - It was confirmed that the p1 radiation model works normally (constant/radiationProperties/radiationModel). If you desire to exclude the calculation of radiative heat transfer, you can set the radiation model to "none".
 
