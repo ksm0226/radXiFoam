@@ -19,7 +19,7 @@ for i in range(4):
 	mf.append((mm[i] * vf[i]) / mTot)
 	
 H2_ratio = mf[0] / mf[1]
-H2_eq_ratio = H2_ratio / 0.125
+H2_eq_ratio = H2_ratio / 0.125 # 0.125 = stoichiometry H2/O2 mass ratio
 
 H2_alpha = 2.18 - (0.8 * (H2_eq_ratio - 1))
 
