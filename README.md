@@ -5,7 +5,8 @@ CFD simulation solver for flamelet progress variable (FPV) combustion model with
 radXiFoam is an open source simulation tool for studying premixed flames. The solver is based on the XiFoam code developed by [OpenCFD Ltd.](http://openfoam.com/). 
 The following models have been added.
 * powerLaw (constant/combustionProperties/laminarFlameSpeedCorrelation) - for laminar flame speed
-* vaporInhomogeneousMixture (constant/thermophysicalProperties/mixture) - for calculation of mixture fraction after combustion 
+* vaporInhomogeneousMixture (constant/thermophysicalProperties/mixture) - for calculation of mixture fraction after combustion
+* vaporGreyMeanAbsorptionEmission (constant/radiationProperties/absorptionEmissionModel) - or calculating the radiative absorption coefficient of water vapor  
 * radiation heat transfer
 
 radXiFoam can be used for:
