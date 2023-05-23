@@ -6,7 +6,7 @@ radXiFoam is an open source simulation tool for studying premixed flames. The so
 The following models have been added.
 * powerLaw (constant/combustionProperties/laminarFlameSpeedCorrelation) - for laminar flame speed
 * vaporInhomogeneousMixture (constant/thermophysicalProperties/mixture) - for calculation of mixture fraction after combustion
-* vaporGreyMeanAbsorptionEmission (constant/radiationProperties/absorptionEmissionModel) - or calculating the radiative absorption coefficient of water vapor  
+* vaporGreyMeanAbsorptionEmission (constant/radiationProperties/absorptionEmissionModel) - for calculating the radiative absorption coefficient of water vapor  
 * radiation heat transfer
 
 radXiFoam can be used for:
